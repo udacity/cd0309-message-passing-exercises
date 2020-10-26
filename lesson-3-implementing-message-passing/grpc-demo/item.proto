@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message ItemMessage {
+  string name = 1;
+  string brand_name = 2;
+  int32 id = 3;
+  float weight = 4;
+}
+
+service ItemService {
+  rpc Create(ItemMessage) returns (ItemMessage);
+}
