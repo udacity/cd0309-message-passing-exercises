@@ -14,7 +14,7 @@ stub = item_pb2_grpc.ItemServiceStub(channel)
 # Update this with desired payload
 item = item_pb2.ItemMessage(
     name="Non-Stick Frying Pan",
-    brand_name=10,
+    brand_name="Cuisinart",
     id=4,
     weight=4.5
 )
