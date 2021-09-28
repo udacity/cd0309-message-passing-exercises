@@ -11,7 +11,7 @@ def health():
     return jsonify({'response': 'Hello World!'})
 
 
-@app.route('/api/orders/computers', methods=['GET', 'POST'])
+@app.route('/api/orders/computers', methods=['GET', 'POST'], endpoint='orders_v1')
 def computers():
     if request.method == 'GET':
         return jsonify(retrieve_orders())
@@ -22,7 +22,7 @@ def computers():
         raise Exception('Unsupported HTTP request type.')
 
 
-@app.route('/api/v2/orders/computers', methods=['GET', 'POST'])
+@app.route('/api/v2/orders/computers', methods=['GET', 'POST'], endpoint='orders_v2')
 def computers():
     if request.method == 'GET':
         return jsonify(retrieve_orders())
