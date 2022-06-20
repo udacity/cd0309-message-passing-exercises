@@ -28,10 +28,10 @@ def demo(path_demo=None):
 @app.route('/api/items/<item_id>', methods=['GET', 'POST'])
 def pets(item_id):
     if request.method == 'GET':
-        return Response(json.dumps(retrieve_item(pet_id)), 200, {'Content-Type': 'application/json'}
+        return Response(json.dumps(retrieve_item(pet_id)), 200, {'Content-Type': 'application/json'})
     elif request.method == 'POST':
         request_body = request.json
-        return Response(json.dumps(create_item(item_id, request_body)
+        return Response(json.dumps(create_item(item_id, request_body)))
     else:
         raise Exception('Unsupported HTTP request type.')
 
