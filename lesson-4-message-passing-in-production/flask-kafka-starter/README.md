@@ -3,8 +3,14 @@ This is a bare-bones Flask application that showcases how simple it can be to se
 
 Flask applications can look very different depending on how they are structured and implemented. This application is built to have the minimum number of dependencies to run.
 
+### Create a new virtual environment
+`python3 -m venv venv`
+
+### Activate the environment
+`source venv/bin/activate`
+
 ## Running the app
-1. Install Flask: `pip install Flask kafka-python`
+1. Install Flask: `pip install Flask==3.1.0 kafka-python==2.2.10`
 2. Run the app: `flask run`
 
 The application should be available at `localhost:5000`.

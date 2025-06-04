@@ -20,7 +20,7 @@ def customers():
     response = make_response(jsonify(sample_response))
 
     # Add Access-Control-Allow-Origin header to allow cross-site request
-    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
+    response.headers['Access-Control-Allow-Origin'] = '*'
 
     return response
 
@@ -35,7 +35,7 @@ def employees():
     response = make_response(jsonify(sample_response))
 
     # Add Access-Control-Allow-Origin header to allow cross-site request
-    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
+    response.headers['Access-Control-Allow-Origin'] = '*'
 
     return response
 
@@ -54,6 +54,6 @@ def notifications():
     response = make_response(jsonify(sample_response))
 
     # Add Access-Control-Allow-Origin header to allow cross-site request
-    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
+    response.headers['Access-Control-Allow-Origin'] = '*'
 
     return response
