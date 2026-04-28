@@ -36,7 +36,8 @@ def computers():
 
 
 @app.route('/api/v2/orders/computers', methods=['GET', 'POST'])
-def computers():
+# Keep the route behavior unchanged; Flask 3 requires unique view function names.
+def computers_v2():
     if request.method == 'GET':
         return jsonify(retrieve_orders())
     elif request.method == 'POST':
